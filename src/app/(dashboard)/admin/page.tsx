@@ -46,4 +46,17 @@ const AdminPage = ({
   );
 };
 
+
+export async function getStaticProps() {
+  try {
+    // ton code ici
+    return { props: { /* data */ } };
+  } catch (error) {
+    console.error('Erreur dans getStaticProps:', error);
+    return {
+      notFound: true, // ou redirect vers une autre page
+    };
+  }
+}
+
 export default AdminPage;
